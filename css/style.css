@@ -117,7 +117,7 @@ a { color: inherit; text-decoration: none; }
 .tech-card img { width: 36px; height: 36px; }
 
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; perspective: 1200px; }
-.flip-outer { height: 220px; }
+.flip-outer { height: 290px; }
 .flip-inner {
   position: relative; width: 100%; height: 100%;
   transition: transform 0.6s cubic-bezier(.2,.8,.2,1); transform-style: preserve-3d;
@@ -125,7 +125,7 @@ a { color: inherit; text-decoration: none; }
 .flip-outer:hover .flip-inner { transform: rotateY(180deg); }
 .flip-front, .flip-back {
   position: absolute; inset: 0; backface-visibility: hidden;
-  border-radius: var(--radius); padding: 22px;
+  border-radius: var(--radius); padding: 22px; overflow: hidden;
   background: var(--bg-panel); border: 0.5px solid rgba(255,255,255,0.08);
 }
 .flip-back { transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: space-between; }
@@ -133,6 +133,6 @@ a { color: inherit; text-decoration: none; }
 .project-tag { font-size: 12px; color: var(--text-secondary); }
 .project-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
 .badge-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
-.badge { font-size: 11px; padding: 4px 10px; border-radius: 20px; background: rgba(77,232,255,0.12); color: var(--accent-cyan); }
+.badge { font-size: 11px; padding: 4px 10px; border-radius: 20px; background: rgba(77,232,255,0.12); color: var(--accent-cyan); white-space: nowrap; }
 .link-row { display: flex; gap: 16px; font-size: 13px; }
 .link-row a { color: var(--accent-cyan); }
