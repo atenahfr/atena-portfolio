@@ -31,4 +31,7 @@ function initTilt(selector) {
 document.addEventListener('DOMContentLoaded', () => {
   initMagnetic('.magnetic');
   initTilt('.tilt');
+  document.querySelectorAll('.chip').forEach((chip, i) => {
+  chip.style.animationDelay = `${i * 0.15}s`;
+  });
 });
