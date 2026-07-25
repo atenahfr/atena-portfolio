@@ -44,17 +44,63 @@
   </div>
 </section>
 
-  <section id="skills">
+  <section id="skills" class="skills-mesh">
   <div class="container">
     <h2 data-reveal="up">Skills</h2>
-    <div class="chip-row" data-reveal="up">
-      <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span>
-      <span class="chip">JavaScript</span><span class="chip">Rust</span><span class="chip">Haskell</span>
-      <span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Docker</span>
-      <span class="chip">RBAC</span><span class="chip">OWASP</span><span class="chip">Threshold cryptography</span>
-      <span class="chip">AES</span><span class="chip">Agile/Scrum</span><span class="chip">SPSS</span>
-      <span class="chip">Team leadership</span><span class="chip">Technical writing</span>
-    </div>
+  </div>
+
+  <div class="skills-mesh__stage">
+    <svg class="skills-mesh__svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet">
+      <g class="skills-mesh__edges">
+        <line class="skill-edge" data-id="python-java" x1="150" y1="120" x2="320" y2="90"></line>
+        <line class="skill-edge" data-id="java-c" x1="320" y1="90" x2="480" y2="140"></line>
+        <line class="skill-edge" data-id="c-javascript" x1="480" y1="140" x2="650" y2="100"></line>
+        <line class="skill-edge" data-id="javascript-rust" x1="650" y1="100" x2="820" y2="130"></line>
+        <line class="skill-edge" data-id="rust-haskell" x1="820" y1="130" x2="980" y2="90"></line>
+        <line class="skill-edge" data-id="python-flask" x1="150" y1="120" x2="500" y2="300"></line>
+        <line class="skill-edge" data-id="flask-sqlite" x1="500" y1="300" x2="350" y2="340"></line>
+        <line class="skill-edge" data-id="flask-docker" x1="500" y1="300" x2="650" y2="340"></line>
+        <line class="skill-edge" data-id="rbac-flask" x1="250" y1="480" x2="500" y2="300"></line>
+        <line class="skill-edge" data-id="rbac-owasp" x1="250" y1="480" x2="420" y2="520"></line>
+        <line class="skill-edge" data-id="owasp-flask" x1="420" y1="520" x2="500" y2="300"></line>
+        <line class="skill-edge" data-id="owasp-aes" x1="420" y1="520" x2="600" y2="500"></line>
+        <line class="skill-edge" data-id="aes-threshold" x1="600" y1="500" x2="780" y2="480"></line>
+        <line class="skill-edge" data-id="agile-leadership" x1="200" y1="620" x2="420" y2="650"></line>
+        <line class="skill-edge" data-id="leadership-flask" x1="420" y1="650" x2="500" y2="300"></line>
+        <line class="skill-edge" data-id="leadership-writing" x1="420" y1="650" x2="650" y2="620"></line>
+        <line class="skill-edge" data-id="writing-spss" x1="650" y1="620" x2="850" y2="650"></line>
+        <line class="skill-edge" data-id="threshold-rust" x1="780" y1="480" x2="820" y2="130"></line>
+      </g>
+      <g class="skills-mesh__nodes">
+        <g class="skill-node" data-id="python" transform="translate(150,120)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Python</text></g>
+        <g class="skill-node" data-id="java" transform="translate(320,90)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Java</text></g>
+        <g class="skill-node" data-id="c" transform="translate(480,140)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">C</text></g>
+        <g class="skill-node" data-id="javascript" transform="translate(650,100)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">JavaScript</text></g>
+        <g class="skill-node" data-id="rust" transform="translate(820,130)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Rust</text></g>
+        <g class="skill-node" data-id="haskell" transform="translate(980,90)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Haskell</text></g>
+        <g class="skill-node" data-id="flask" transform="translate(500,300)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Flask</text></g>
+        <g class="skill-node" data-id="sqlite" transform="translate(350,340)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">SQLite</text></g>
+        <g class="skill-node" data-id="docker" transform="translate(650,340)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Docker</text></g>
+        <g class="skill-node" data-id="rbac" transform="translate(250,480)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">RBAC</text></g>
+        <g class="skill-node" data-id="owasp" transform="translate(420,520)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">OWASP</text></g>
+        <g class="skill-node" data-id="aes" transform="translate(600,500)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">AES</text></g>
+        <g class="skill-node" data-id="threshold" transform="translate(780,480)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Threshold cryptography</text></g>
+        <g class="skill-node" data-id="agile" transform="translate(200,620)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Agile/Scrum</text></g>
+        <g class="skill-node" data-id="leadership" transform="translate(420,650)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Team leadership</text></g>
+        <g class="skill-node" data-id="writing" transform="translate(650,620)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Technical writing</text></g>
+        <g class="skill-node" data-id="spss" transform="translate(850,650)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">SPSS</text></g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="skills-mesh__fallback chip-row">
+    <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span>
+    <span class="chip">JavaScript</span><span class="chip">Rust</span><span class="chip">Haskell</span>
+    <span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Docker</span>
+    <span class="chip">RBAC</span><span class="chip">OWASP</span>
+    <span class="chip">Threshold cryptography</span><span class="chip">AES</span>
+    <span class="chip">Agile/Scrum</span><span class="chip">SPSS</span>
+    <span class="chip">Team leadership</span><span class="chip">Technical writing</span>
   </div>
 </section>
   <section id="technologies">
@@ -297,6 +343,7 @@
   <script src="js/animations.js" defer></script>
   <script src="js/case-files.js" defer></script>
   <script src="js/about-decrypt.js" defer></script>
+  <script src="js/skills-mesh.js" defer></script>
   <script src="js/scene-hero.js" defer></script>
 </body>
 </html>

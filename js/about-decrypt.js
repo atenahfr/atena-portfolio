@@ -51,8 +51,8 @@
 
   ScrollTrigger.create({
     trigger: section,
-    start: 'top 70%',
-    end: 'bottom 40%',
+    start: 'top 80%',
+    end: 'bottom 65%',
     scrub: 0.5,
     onUpdate: (self) => { revealChars = Math.round(self.progress * totalLength); },
   });
