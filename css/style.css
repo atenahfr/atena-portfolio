@@ -257,3 +257,19 @@ a { color: inherit; text-decoration: none; }
   .case-file { height: auto; }
   .case-file__sticky { height: auto; padding: 64px 0; }
 }
+
+.about-decrypt { padding: 140px 0; background: var(--bg-deep); }
+.about-decrypt__body { max-width: 760px; margin-top: 32px; }
+
+.decrypt-p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.decrypt-p .locked { color: var(--text-primary); }
+.decrypt-p .scrambled {
+  color: var(--accent-cyan);
+  opacity: 0.55;
+  font-family: 'Space Grotesk', monospace;
+}
