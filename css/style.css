@@ -354,3 +354,66 @@ a { color: inherit; text-decoration: none; }
 
 .tool-card:hover .tool-caption { transform: translateY(0); }
 .tool-card:hover .tool-icon { transform: translateY(-6px); }
+
+.exp-log { padding: 140px 0; background: var(--bg-deep); }
+.exp-log__list { margin-top: 40px; display: flex; flex-direction: column; gap: 32px; }
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 160px;
+  gap: 24px;
+  align-items: start;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.exp-row__meta { display: flex; flex-direction: column; gap: 10px; }
+.exp-pid { font-family: var(--font-heading), monospace; font-size: 12px; color: var(--text-secondary); letter-spacing: 0.05em; }
+
+.exp-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+}
+.exp-status__dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent-cyan);
+  animation: exp-pulse 2.4s ease-out infinite;
+}
+@keyframes exp-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(93,240,196,0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(93,240,196,0); }
+  100% { box-shadow: 0 0 0 0 rgba(93,240,196,0); }
+}
+
+.exp-role { font-family: var(--font-heading); font-size: 20px; margin-bottom: 6px; }
+.exp-dates { color: var(--accent-cyan); font-size: 13px; margin-bottom: 10px; }
+.exp-desc { color: var(--text-secondary); font-size: 15px; line-height: 1.6; }
+
+.exp-row__runtime { text-align: right; }
+.exp-runtime__num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.exp-runtime__label, .exp-runtime__static {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+@media (max-width: 800px) {
+  .exp-row { grid-template-columns: 1fr; }
+  .exp-row__runtime { text-align: left; margin-top: 12px; }
+}
