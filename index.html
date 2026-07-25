@@ -388,17 +388,24 @@
 </section>
 
   <section id="testimonials"><div class="container"><h2 data-reveal="up">Testimonials</h2></div></section>
-  <section id="contact">
+  <section id="contact" class="contact-channel">
   <div class="container">
     <h2 data-reveal="up">Contact</h2>
+
+    <p class="channel-status" data-reveal="up">
+      <span class="channel-status__dot"></span>
+      <span class="channel-status__text">AWAITING TRANSMISSION...</span>
+    </p>
+
     <form class="glass contact-form" data-reveal="up" action="https://formspree.io/f/mykrbbzg" method="POST">
       <input type="text" name="name" placeholder="Your name" required />
       <input type="email" name="email" placeholder="Your email" required />
       <textarea name="message" placeholder="Message" rows="4" required></textarea>
       <div class="magnetic-wrap">
-        <button type="submit" class="btn-primary magnetic">Send &rarr;</button>
+        <button type="submit" class="btn-primary magnetic">Transmit &rarr;</button>
       </div>
     </form>
+
     <p style="margin-top:20px; color:var(--text-secondary); font-size:14px;">atenah.cs@gmail.com</p>
   </div>
 </section>
@@ -434,6 +441,7 @@
   <script src="js/experience-log.js" defer></script>
   <script src="js/education-log.js" defer></script>
   <script src="js/achievements-badges.js" defer></script>
+  <script src="js/contact-channel.js" defer></script>
   <script src="js/scene-hero.js" defer></script>
 </body>
 </html>
