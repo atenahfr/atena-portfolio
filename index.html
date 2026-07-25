@@ -83,83 +83,133 @@
     </div>
   </div>
 </section>
-  <section id="projects">
-  <div class="container">
-    <h2 data-reveal="up">Projects</h2>
-    <div class="project-grid">
+  <section id="projects" class="projects-cases">
+  <div class="case-intro container" data-reveal="up">
+    <p class="eyebrow">Projects</p>
+    <h2>Case Files</h2>
+  </div>
 
-      <div class="flip-outer tilt" data-reveal="up">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <p class="project-title">Mesh Vulnerability Case Study</p>
-            <p class="project-tag">SPyCy Lab, TMU</p>
+  <!-- CASE FILE 1: Mesh Vulnerability (fully built, real stats) -->
+  <div class="case-file">
+    <div class="case-file__sticky">
+      <div class="case-file__grid container">
+        <div class="case-file__terminal">
+          <span class="case-file__cursor">_</span>
+          <span class="case-file__type" data-full-text="ACCESSING FILE // MESH_VULNERABILITY_CASE_STUDY.log"></span>
+        </div>
+        <div class="case-file__content">
+          <span class="case-file__tag">Security Research · SPyCy Lab</span>
+          <h3 class="case-file__title">Passive Eavesdropping in a batman-adv Mesh Network</h3>
+          <p class="case-file__desc">Captured and analyzed live inter-node traffic on a 5-node wireless mesh network, proving any nearby device could silently read cryptographic key shares in plaintext — no authentication, no intrusion, no trace.</p>
+          <div class="case-file__stats">
+            <div class="case-stat"><span class="case-stat__num" data-target="5">0</span><span class="case-stat__label">mesh nodes analyzed</span></div>
+            <div class="case-stat"><span class="case-stat__num" data-target="100">0</span><span class="case-stat__label">packets decoded</span></div>
+            <div class="case-stat"><span class="case-stat__num" data-target="0">0</span><span class="case-stat__label">credentials required</span></div>
           </div>
-          <div class="flip-back">
-            <p class="project-desc">Found and documented a passive eavesdropping vulnerability in a live batman-adv mesh network, cryptographic shares were readable in plaintext, defeating a Shamir's Secret Sharing experiment at the transport layer.</p>
-            <div class="badge-row"><span class="badge">Wireshark</span><span class="badge">Scapy</span><span class="badge">Threshold crypto</span></div>
+          <div class="case-file__links">
+            <a href="assets/Mesh_Vulnerability_Case_Study_Atena.pdf" target="_blank" rel="noopener" class="case-link">Read the case study →</a>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="flip-outer tilt" data-reveal="up">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <p class="project-title">Log Sentinel</p>
-            <p class="project-tag">Personal project</p>
-          </div>
-          <div class="flip-back">
-            <p class="project-desc">Flask + pandas dashboard that parses Apache logs and flags brute-force attacks, directory scanning, and error spikes.</p>
-            <div class="badge-row"><span class="badge">Python</span><span class="badge">Flask</span><span class="badge">pandas</span></div>
-            <div class="link-row">
-              <a href="https://github.com/atenahfr/log-sentinel" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://atenahfr.github.io/log-sentinel/frontend/index.html" target="_blank" rel="noopener">Live demo</a>
-            </div>
-          </div>
+  <!-- CASE FILE 2: Log Sentinel -->
+<div class="case-file">
+  <div class="case-file__sticky">
+    <div class="case-file__grid container">
+      <div class="case-file__terminal">
+        <span class="case-file__cursor">_</span>
+        <span class="case-file__type" data-full-text="ACCESSING FILE // LOG_SENTINEL.log"></span>
+      </div>
+      <div class="case-file__content">
+        <span class="case-file__tag">Full-Stack Security Tooling · Live Deployment</span>
+        <h3 class="case-file__title">Log Sentinel — Automated Log Analysis Dashboard</h3>
+        <p class="case-file__desc">Parses Apache/Nginx access logs and automatically flags brute-force attempts, directory scans, server-error spikes, and off-hours activity — then explains, in plain English, why each event is suspicious and what to do about it, rather than just dumping raw alerts.</p>
+        <div class="case-file__stats">
+          <div class="case-stat"><span class="case-stat__num" data-target="4">0</span><span class="case-stat__label">anomaly types detected</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="6">0</span><span class="case-stat__label">REST API endpoints</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="38">0</span><span class="case-stat__label">days, solo build</span></div>
+        </div>
+        <div class="case-file__links">
+          <a href="https://atenahfr.github.io/log-sentinel/frontend/index.html" target="_blank" rel="noopener" class="case-link">Live demo →</a>
+          <a href="https://github.com/atenahfr/log-sentinel" target="_blank" rel="noopener" class="case-link">GitHub →</a>
+          <a href="https://dev.to/atenahfr/how-i-built-a-log-analysis-tool-to-detect-network-anomalies-45ed" target="_blank" rel="noopener" class="case-link">Blog post →</a>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="flip-outer tilt" data-reveal="up">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <p class="project-title">ScrumManager <span class="badge" style="margin-left:8px;">In progress</span></p>
-            <p class="project-tag">Team project &mdash; led as team lead</p>
-          </div>
-          <div class="flip-back">
-            <p class="project-desc">Full sprint-lifecycle Scrum app: RBAC, sprint locking, burndown charts, audit logging, CI/CD. Led a 5-person team across 2 agile sprints.</p>
-            <div class="badge-row"><span class="badge">Flask</span><span class="badge">PostgreSQL</span><span class="badge">Docker</span></div>
-            <div class="link-row">
-              <a href="https://github.com/ScrumManagerTeam/ScrumManager" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://scrummanager.onrender.com" target="_blank" rel="noopener">Live demo</a>
-            </div>
-          </div>
+  <!-- CASE FILE 3: ScrumManager -->
+<div class="case-file">
+  <div class="case-file__sticky">
+    <div class="case-file__grid container">
+      <div class="case-file__terminal">
+        <span class="case-file__cursor">_</span>
+        <span class="case-file__type" data-full-text="ACCESSING FILE // SCRUMMANAGER.log"></span>
+      </div>
+      <div class="case-file__content">
+        <span class="case-file__tag">Full-Stack Product · Team Project · In Progress</span>
+        <h3 class="case-file__title">ScrumManager — Agile Project Management Platform</h3>
+        <p class="case-file__desc">A production-grade Scrum tool for backlog management, sprint planning, and team collaboration — JWT-secured REST API, PostgreSQL database, React/TypeScript frontend, and a full CI/CD pipeline that auto-deploys on every push. Built as a working deployed product, not a course exercise.</p>
+        <div class="case-file__stats">
+          <div class="case-stat"><span class="case-stat__num" data-target="92">0</span><span class="case-stat__label">commits shipped</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="15">0</span><span class="case-stat__label">REST API endpoints</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="73">0</span><span class="case-stat__label">% test coverage</span></div>
+        </div>
+        <div class="case-file__links">
+          <a href="https://scrummanager.onrender.com" target="_blank" rel="noopener" class="case-link">Live app →</a>
+          <a href="https://github.com/ScrumManagerTeam/ScrumManager" target="_blank" rel="noopener" class="case-link">GitHub →</a>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="flip-outer tilt" data-reveal="up">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <p class="project-title">Privacy &amp; Security Analysis</p>
-            <p class="project-tag">Retail pricing system</p>
-          </div>
-          <div class="flip-back">
-            <p class="project-desc">Designed RBAC + Google OAuth for a retail pricing system, ran a formal OWASP security analysis, and studied the gap between stated privacy values and real user behavior using SPSS.</p>
-            <div class="badge-row"><span class="badge">RBAC</span><span class="badge">OAuth</span><span class="badge">OWASP</span><span class="badge">SPSS</span></div>
-          </div>
+      <!-- CASE FILE 5: Privacy & Security Analysis -->
+<div class="case-file">
+  <div class="case-file__sticky">
+    <div class="case-file__grid container">
+      <div class="case-file__terminal">
+        <span class="case-file__cursor">_</span>
+        <span class="case-file__type" data-full-text="ACCESSING FILE // PRICING_SYSTEM_ANALYSIS.log"></span>
+      </div>
+      <div class="case-file__content">
+        <span class="case-file__tag">Systems Design & Policy Analysis · Team Project</span>
+        <h3 class="case-file__title">Privacy & Security Analysis — Enterprise Pricing System Design</h3>
+        <p class="case-file__desc">Designed and analyzed a role-based pricing management system for a grocery chain, built on Google OAuth authentication, encrypted cloud storage, and an approval workflow that keeps arbitrary price changes in check. Led the security and privacy analysis — threat surfaces, OWASP-aligned testing plans, data minimization, and the ethical and societal tradeoffs of automating a process that used to rely on human judgment.</p>
+        <div class="case-file__stats">
+          <div class="case-stat"><span class="case-stat__num" data-target="6">0</span><span class="case-stat__label">analysis dimensions covered</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="5">0</span><span class="case-stat__label">team members</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="9">0</span><span class="case-stat__label">week implementation plan</span></div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="flip-outer tilt" data-reveal="up">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <p class="project-title">Blueberry <span class="badge" style="margin-left:8px;">In progress</span></p>
-            <p class="project-tag">Team project</p>
-          </div>
-          <div class="flip-back">
-            <p class="project-desc">Rust application that splits files using an All-or-Nothing Transform and distributes the shares across multiple cloud providers, so no single provider can reconstruct the original file.</p>
-            <div class="badge-row"><span class="badge">Rust</span><span class="badge">Cryptography</span></div>
-          </div>
+      <!-- CASE FILE 4: Blueberry -->
+<div class="case-file">
+  <div class="case-file__sticky">
+    <div class="case-file__grid container">
+      <div class="case-file__terminal">
+        <span class="case-file__cursor">_</span>
+        <span class="case-file__type" data-full-text="ACCESSING FILE // BLUEBERRY.log"></span>
+      </div>
+      <div class="case-file__content">
+        <span class="case-file__tag">Distributed Systems · SPyCy Lab, TMU · In Progress</span>
+        <h3 class="case-file__title">Blueberry — Distributed Encrypted File Storage</h3>
+        <p class="case-file__desc">A file storage system that splits files into encrypted shares and distributes them across Amazon S3, Google Drive, and Dropbox — so no single provider ever holds a complete copy. Built in Rust as a SPyCy Lab research project; I designed the dashboard UI in Figma, defined acceptance criteria for the frontend sub-issues, and am currently building the frontend layer in Dioxus.</p>
+        <div class="case-file__stats">
+          <div class="case-stat"><span class="case-stat__num" data-target="4">0</span><span class="case-stat__label">Rust workspace crates</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="3">0</span><span class="case-stat__label">cloud providers split across</span></div>
+          <div class="case-stat"><span class="case-stat__num" data-target="0">0</span><span class="case-stat__label">providers hold a full copy</span></div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
@@ -258,6 +308,7 @@
 </script>
   <script src="js/main.js" defer></script>
   <script src="js/animations.js" defer></script>
+  <script src="js/case-files.js" defer></script>
   <script src="js/scene-hero.js" defer></script>
 </body>
 </html>
