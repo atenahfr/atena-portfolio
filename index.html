@@ -11,7 +11,6 @@
 <body>
 
   <nav id="navbar" class="glass">
-    <span class="logo">atena.dev</span>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -28,7 +27,7 @@
       <h1 id="hero-heading" class="gradient-text">Atena Hosseinifar</h1>
       <p class="hero-sub">Building things that break, then figuring out why they broke.</p>
       <div class="magnetic-wrap">
-        <button class="btn-primary magnetic">See my work &rarr;</button>
+        <a href="#projects" class="btn-primary magnetic">See my work &rarr;</a>
       </div>
     </div>
   </section>
@@ -173,7 +172,7 @@
         <div class="case-file__content">
           <span class="case-file__tag">Security Research · SPyCy Lab</span>
           <h3 class="case-file__title">Passive Eavesdropping in a batman-adv Mesh Network</h3>
-          <p class="case-file__desc">Captured and analyzed live inter-node traffic on a 5-node wireless mesh network, proving any nearby device could silently read cryptographic key shares in plaintext — no authentication, no intrusion, no trace.</p>
+          <p class="case-file__desc">Captured and analyzed live inter-node traffic on a 5-node wireless mesh network, proving any nearby device could silently read cryptographic key shares in plaintext; no authentication, no intrusion, no trace.</p>
           <div class="case-file__stats">
             <div class="case-stat"><span class="case-stat__num" data-target="5">0</span><span class="case-stat__label">mesh nodes analyzed</span></div>
             <div class="case-stat"><span class="case-stat__num" data-target="100">0</span><span class="case-stat__label">packets decoded</span></div>
@@ -225,7 +224,7 @@
       <div class="case-file__content">
         <span class="case-file__tag">Full-Stack Product · Team Project · In Progress</span>
         <h3 class="case-file__title">ScrumManager — Agile Project Management Platform</h3>
-        <p class="case-file__desc">A production-grade Scrum tool for backlog management, sprint planning, and team collaboration — JWT-secured REST API, PostgreSQL database, React/TypeScript frontend, and a full CI/CD pipeline that auto-deploys on every push. Built as a working deployed product, not a course exercise.</p>
+        <p class="case-file__desc">A production-grade Scrum tool for backlog management, sprint planning, and team collaboration; JWT-secured REST API, PostgreSQL database, React/TypeScript frontend, and a full CI/CD pipeline that auto-deploys on every push. Led a group of five and built as a working deployed product. Still in progress.</p>
         <div class="case-file__stats">
           <div class="case-stat"><span class="case-stat__num" data-target="92">0</span><span class="case-stat__label">commits shipped</span></div>
           <div class="case-stat"><span class="case-stat__num" data-target="15">0</span><span class="case-stat__label">REST API endpoints</span></div>
@@ -251,11 +250,14 @@
       <div class="case-file__content">
         <span class="case-file__tag">Systems Design & Policy Analysis · Team Project</span>
         <h3 class="case-file__title">Privacy & Security Analysis — Enterprise Pricing System Design</h3>
-        <p class="case-file__desc">Designed and analyzed a role-based pricing management system for a grocery chain, built on Google OAuth authentication, encrypted cloud storage, and an approval workflow that keeps arbitrary price changes in check. Led the security and privacy analysis — threat surfaces, OWASP-aligned testing plans, data minimization, and the ethical and societal tradeoffs of automating a process that used to rely on human judgment.</p>
+        <p class="case-file__desc">Designed and analyzed a role-based pricing management system for a grocery chain, built on Google OAuth authentication, encrypted cloud storage, and an approval workflow that keeps arbitrary price changes in check. Led the security and privacy analysis, threat surfaces, OWASP-aligned testing plans, data minimization, and the ethical and societal tradeoffs of automating a process that used to rely on human judgment.</p>
         <div class="case-file__stats">
           <div class="case-stat"><span class="case-stat__num" data-target="6">0</span><span class="case-stat__label">analysis dimensions covered</span></div>
           <div class="case-stat"><span class="case-stat__num" data-target="5">0</span><span class="case-stat__label">team members</span></div>
           <div class="case-stat"><span class="case-stat__num" data-target="9">0</span><span class="case-stat__label">week implementation plan</span></div>
+        </div>
+        <div class="case-file__links">
+          <a href="assets/pricing-system-analysis.pdf" target="_blank" rel="noopener" class="case-link">Read the case study →</a>
         </div>
       </div>
     </div>
@@ -271,9 +273,9 @@
         <span class="case-file__type" data-full-text="ACCESSING FILE // BLUEBERRY.log"></span>
       </div>
       <div class="case-file__content">
-        <span class="case-file__tag">Distributed Systems · SPyCy Lab, TMU · In Progress</span>
+        <span class="case-file__tag">Academic Research · SPyCy Lab, TMU · In Progress</span>
         <h3 class="case-file__title">Blueberry — Distributed Encrypted File Storage</h3>
-        <p class="case-file__desc">A file storage system that splits files into encrypted shares and distributes them across Amazon S3, Google Drive, and Dropbox — so no single provider ever holds a complete copy. Built in Rust as a SPyCy Lab research project; I designed the dashboard UI in Figma, defined acceptance criteria for the frontend sub-issues, and am currently building the frontend layer in Dioxus.</p>
+        <p class="case-file__desc">A SPyCy Lab research project at Toronto Metropolitan University, built under Professor Navid Nasr Esfehani: a distributed file storage system in Rust that splits files into encrypted shares and spreads them across Amazon S3, Google Drive, and Dropbox, so no single provider, or single point of compromise, ever holds a complete copy.</p>
         <div class="case-file__stats">
           <div class="case-stat"><span class="case-stat__num" data-target="4">0</span><span class="case-stat__label">Rust workspace crates</span></div>
           <div class="case-stat"><span class="case-stat__num" data-target="3">0</span><span class="case-stat__label">cloud providers split across</span></div>
@@ -402,7 +404,7 @@
       <input type="email" name="email" placeholder="Your email" required />
       <textarea name="message" placeholder="Message" rows="4" required></textarea>
       <div class="magnetic-wrap">
-        <button type="submit" class="btn-primary magnetic">Transmit &rarr;</button>
+        <button type="submit" class="btn-primary magnetic">Send &rarr;</button>
       </div>
     </form>
 
