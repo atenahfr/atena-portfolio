@@ -3,8 +3,6 @@
   if (!section) return;
 
   const isSmall = window.matchMedia('(max-width: 700px)').matches;
-  if (isSmall) return;
-
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const REVEAL_ORDER = [
@@ -58,6 +56,29 @@
       const [type, id] = entry.split(':');
       setState(getEl(type, id), type, true);
     });
+  } else if (isSmall) {
+    let played = false;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !played) {
+          played = true;
+          const start = performance.now();
+          const duration = 2200;
+          function tick(now) {
+            const p = Math.min(1, (now - start) / duration);
+            const revealCount = Math.round(p * REVEAL_ORDER.length);
+            REVEAL_ORDER.forEach((item, i) => {
+              const [type, id] = item.split(':');
+              setState(getEl(type, id), type, i < revealCount);
+            });
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(section);
   } else {
     ScrollTrigger.create({
       trigger: section,
@@ -76,7 +97,7 @@
 
   Array.from(section.querySelectorAll('.skill-node')).forEach((node) => {
     const id = node.dataset.id;
-    node.addEventListener('mouseenter', () => {
+    function activate() {
       section.classList.add('is-hovering');
       node.classList.add('is-active');
       (neighborMap[id] || []).forEach(({ neighbor, edge }) => {
@@ -84,8 +105,8 @@
         const n = getEl('node', neighbor);
         if (n) n.classList.add('is-active');
       });
-    });
-    node.addEventListener('mouseleave', () => {
+    }
+    function deactivate() {
       section.classList.remove('is-hovering');
       node.classList.remove('is-active');
       (neighborMap[id] || []).forEach(({ neighbor, edge }) => {
@@ -93,6 +114,15 @@
         const n = getEl('node', neighbor);
         if (n) n.classList.remove('is-active');
       });
-    });
+    }
+    node.addEventListener('mouseenter', activate);
+    node.addEventListener('mouseleave', deactivate);
+    node.addEventListener('touchstart', (e) => { e.stopPropagation(); activate(); }, { passive: true });
+  });
+
+  document.addEventListener('touchstart', () => {
+    section.classList.remove('is-hovering');
+    section.querySelectorAll('.skill-node.is-active').forEach((n) => n.classList.remove('is-active'));
+    section.querySelectorAll('.skill-edge.is-active').forEach((e) => e.classList.remove('is-active'));
   });
 })();

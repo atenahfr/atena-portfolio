@@ -316,8 +316,16 @@ a { color: inherit; text-decoration: none; }
 .skills-mesh__fallback { display: none; margin-top: 32px; }
 
 @media (max-width: 700px) {
-  .skills-mesh__stage { display: none; }
-  .skills-mesh__fallback { display: flex; }
+  .skills-mesh__stage {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+  }
+  .skills-mesh__svg {
+    width: 1200px;
+    max-width: none;
+  }
+  .skills-mesh__fallback { display: none; }
 }
 
 .tools-belt { padding: 120px 0; background: var(--bg-deep); }
@@ -559,3 +567,6 @@ a { color: inherit; text-decoration: none; }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.tool-card.is-open .tool-caption { transform: translateY(0); }
+.tool-card.is-open .tool-icon { transform: translateY(-6px); }
