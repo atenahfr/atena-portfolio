@@ -17,13 +17,6 @@
     const stats = section.querySelectorAll('.case-stat__num');
     const sticky = section.querySelector('.case-file__sticky');
 
-    if (isSmall || reduceMotion) {
-      if (typeEl) typeEl.textContent = fullText;
-      [tag, title, desc, links].forEach((el) => { if (el) { el.style.opacity = 1; el.style.transform = 'none'; } });
-      stats.forEach((el) => { el.textContent = el.dataset.target; });
-      return;
-    }
-
     function render(p) {
       const typeP = mapRange(p, 0, 0.15);
       if (typeEl) typeEl.textContent = fullText.slice(0, Math.round(fullText.length * typeP));
@@ -50,6 +43,30 @@
     }
 
     render(0);
+
+    if (reduceMotion) { render(1); return; }
+
+    if (isSmall) {
+      let played = false;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !played) {
+            played = true;
+            const start = performance.now();
+            const duration = 1400;
+            function tick(now) {
+              const p = Math.min(1, (now - start) / duration);
+              render(p);
+              if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(section);
+      return;
+    }
 
     ScrollTrigger.create({
       trigger: section,
