@@ -764,3 +764,12 @@ a { color: inherit; text-decoration: none; }
   .mini-ts__fill { width: 66%; }
   .mini-ts__warn { opacity: 1; }
 }
+
+.mini-er, .mini-ts {
+  --accent-blue: #4f8cff;
+  --accent-cyan: #00e5ff;
+  --text-primary: #e8eaf6;
+  --text-secondary: #9aa0b8;
+  --bg-panel: #0d0f1a;
+  --bg-deep: #05060c;
+}
