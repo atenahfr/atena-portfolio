@@ -690,3 +690,77 @@ a { color: inherit; text-decoration: none; }
 }
 @keyframes gauge-swing { 0%, 100% { transform: translateX(-50%) rotate(-60deg); } 50% { transform: translateX(-50%) rotate(60deg); } }
 .mini-gauge__labels { display: flex; justify-content: space-between; width: 160px; margin-top: 10px; font-size: 11px; color: var(--text-secondary); }
+
+/* Clothing Retail DBMS — mini ER diagram */
+.mini-er {
+  border-radius: 12px;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 12px;
+}
+.mini-er svg { width: 100%; height: auto; display: block; }
+.mini-er text { font-family: var(--font-heading), monospace; }
+.er-line { stroke: rgba(255,255,255,0.25); stroke-width: 1.5; }
+.er-box { fill: var(--bg-deep); stroke: var(--accent-blue); stroke-width: 1.5; }
+.er-weak { fill: none; stroke: var(--accent-blue); stroke-width: 1.5; }
+.er-label { fill: var(--text-primary); font-size: 11px; text-anchor: middle; }
+.er-card { fill: var(--text-secondary); font-size: 10px; }
+.er-dot { fill: var(--accent-cyan); }
+.er-pulse { fill: var(--accent-cyan); opacity: 0.25; }
+.mini-er__caption { margin-top: 6px; font-size: 12px; color: var(--text-secondary); text-align: center; }
+
+/* Thesis — threshold signing mini-visual */
+.mini-ts {
+  border-radius: 12px;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 16px 14px 14px;
+}
+.mini-ts__nodes { display: flex; justify-content: space-between; margin-bottom: 14px; }
+.mini-ts__node {
+  width: 56px; height: 56px; border-radius: 50%;
+  border: 2px solid var(--accent-blue);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading); font-size: 11px;
+  color: var(--text-secondary);
+}
+.mini-ts__node--a { animation: ts-sign 7s infinite; }
+.mini-ts__node--b { animation: ts-sign 7s 0.9s infinite; }
+.mini-ts__node--c { animation: ts-abort 7s infinite; }
+.mini-ts__track { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.08); overflow: hidden; }
+.mini-ts__fill {
+  height: 100%; width: 0; border-radius: 3px;
+  background: var(--accent-cyan);
+  animation: ts-fill 7s infinite;
+}
+.mini-ts__status { position: relative; height: 18px; margin-top: 10px; font-size: 12px; text-align: center; }
+.mini-ts__status span { position: absolute; left: 0; right: 0; opacity: 0; }
+.mini-ts__ok { color: var(--accent-cyan); animation: ts-ok 7s infinite; }
+.mini-ts__warn { color: #ff5c7a; animation: ts-warn 7s infinite; }
+
+@keyframes ts-sign {
+  0%, 8%   { border-color: var(--accent-blue); color: var(--text-secondary); box-shadow: none; }
+  14%, 88% { border-color: var(--accent-cyan); color: var(--accent-cyan); box-shadow: 0 0 14px rgba(0,229,255,0.35); }
+  100%     { border-color: var(--accent-blue); color: var(--text-secondary); box-shadow: none; }
+}
+@keyframes ts-abort {
+  0%, 30%  { border-color: var(--accent-blue); color: var(--text-secondary); box-shadow: none; }
+  36%, 50% { border-color: var(--accent-cyan); color: var(--accent-cyan); box-shadow: 0 0 14px rgba(0,229,255,0.35); }
+  58%, 88% { border-color: #ff5c7a; color: #ff5c7a; border-style: dashed; box-shadow: 0 0 14px rgba(255,92,122,0.35); }
+  100%     { border-color: var(--accent-blue); color: var(--text-secondary); border-style: solid; box-shadow: none; }
+}
+@keyframes ts-fill {
+  0%, 10% { width: 0; }
+  30%, 56% { width: 66%; }
+  62%, 88% { width: 66%; background: #ff5c7a; }
+  100% { width: 0; }
+}
+@keyframes ts-ok   { 0%, 18% { opacity: 0; } 24%, 52% { opacity: 1; } 58%, 100% { opacity: 0; } }
+@keyframes ts-warn { 0%, 58% { opacity: 0; } 64%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .mini-ts__node--a, .mini-ts__node--b, .mini-ts__node--c,
+  .mini-ts__fill, .mini-ts__ok, .mini-ts__warn { animation: none; }
+  .mini-ts__fill { width: 66%; }
+  .mini-ts__warn { opacity: 1; }
+}
