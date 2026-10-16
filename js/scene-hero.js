@@ -1,6 +1,11 @@
 (function () {
   const canvas = document.getElementById('hero-canvas');
   const container = document.getElementById('hero');
+  if (!canvas || !container || !window.THREE || !THREE.EffectComposer) return;
+  try {
+    const probe = document.createElement('canvas');
+    if (!(probe.getContext('webgl') || probe.getContext('experimental-webgl'))) return;
+  } catch (err) { return; }
   let w = container.clientWidth, h = container.clientHeight;
 
   const scene = new THREE.Scene();
@@ -9,7 +14,7 @@
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
   renderer.setSize(w, h);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, window.innerWidth < 700 ? 1.5 : 2));
 
   const composer = new THREE.EffectComposer(renderer);
   composer.addPass(new THREE.RenderPass(scene, camera));
@@ -121,6 +126,13 @@
   container.addEventListener('click', () => { lockOpen = !lockOpen; });
 
   let targetX = 0, targetY = 0;
+  container.addEventListener('touchmove', (e) => {
+    const t = e.touches[0];
+    if (!t) return;
+    const rect = container.getBoundingClientRect();
+    targetX = ((t.clientX - rect.left) / rect.width - 0.5) * 1.8;
+    targetY = ((t.clientY - rect.top) / rect.height - 0.5) * 1.8;
+  }, { passive: true });
   container.addEventListener('mousemove', (e) => {
     const rect = container.getBoundingClientRect();
     targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 1.8;
@@ -131,9 +143,8 @@
   let frame = 0;
 
   function animate() {
-    requestAnimationFrame(animate);
     frame++;
-    if (frame % 2 === 0) { updateTexture(leftTexObj); updateTexture(rightTexObj); }
+    if (frame % (isSmallScreen ? 4 : 2) === 0) { updateTexture(leftTexObj); updateTexture(rightTexObj); }
 
     const maxGap = 1.1;
     const gapExtra = maxGap * (1 - heroProgress);
@@ -173,11 +184,22 @@
     composer.render();
   }
 
-  if (!isSmallScreen) {
+  let running = false, inView = true;
+  function loop() {
+    if (!running) return;
+    requestAnimationFrame(loop);
     animate();
-  } else {
-    composer.render();
   }
+  function sync() {
+    const shouldRun = inView && !document.hidden;
+    if (shouldRun && !running) { running = true; loop(); }
+    else if (!shouldRun) { running = false; }
+  }
+  new IntersectionObserver((entries) => {
+    entries.forEach((en) => { inView = en.isIntersecting; sync(); });
+  }, { threshold: 0 }).observe(container);
+  document.addEventListener('visibilitychange', sync);
+  sync();
 
   window.addEventListener('resize', () => {
     w = container.clientWidth; h = container.clientHeight;

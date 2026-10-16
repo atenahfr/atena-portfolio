@@ -1,14 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const lenis = new Lenis();
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
+if (window.Lenis) {
+  const lenis = new Lenis();
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+  gsap.ticker.lagSmoothing(0);
 }
-requestAnimationFrame(raf);
-lenis.on('scroll', ScrollTrigger.update);
-gsap.ticker.add((time) => { lenis.raf(time * 1000); });
-gsap.ticker.lagSmoothing(0);
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

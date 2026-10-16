@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#05060c" />
+  <meta name="description" content="Computer Science student at Toronto Metropolitan University working on security and systems research." />
+  <meta property="og:title" content="Atena Hosseinifar — Portfolio" />
+  <meta property="og:description" content="Computer Science student at Toronto Metropolitan University working on security and systems research." />
   <title>Atena Hosseinifar — Portfolio</title>
+  <link rel="icon" href="data:," />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -12,11 +17,11 @@
 
   <nav id="navbar" class="glass">
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -27,564 +32,39 @@
       <h1 id="hero-heading" class="gradient-text">Atena Hosseinifar</h1>
       <p class="hero-sub">Building things that break, then figuring out why they broke.</p>
       <div class="magnetic-wrap">
-        <a href="#projects" class="btn-primary magnetic">See my work &rarr;</a>
+        <a href="projects.html" class="btn-primary magnetic">See my work &rarr;</a>
       </div>
     </div>
   </section>
 
- <section id="about" class="about-decrypt">
-  <div class="container">
-    <p class="eyebrow" data-reveal="up">About</p>
-    <div class="about-decrypt__body">
-      <p class="decrypt-p">I'm a Computer Science student at Toronto Metropolitan University who ended up in security almost by accident. I was capturing routine network traffic during a research project and noticed something that shouldn't have been readable. It was. That one thirty-minute discovery, a live cryptography experiment leaking secrets in plaintext over a mesh network, is basically how I think about most systems now: the math can be perfect and the whole thing can still fail somewhere nobody was looking.</p>
-      <p class="decrypt-p">Most of what I build lives in that gap. I've led a team of five through two agile sprints to ship a full Scrum management tool, written a log analysis dashboard that flags brute-force patterns and anomalies in server logs, and dug into the distance between what people say they want protected and what they actually let slip, especially around location data. Right now I'm part of a team building a Rust tool that splits files across cloud providers so no single one ever holds enough to reconstruct them, its own small bet that trust should be distributed, not assumed.</p>
-      <p class="decrypt-p">I'm looking for the next place to point that curiosity, ideally somewhere doing real security or privacy research.</p>
-    </div>
-  </div>
-</section>
-
-  <section id="skills" class="skills-mesh">
-  <div class="container">
-    <h2 data-reveal="up">Skills</h2>
-  </div>
-
-  <div class="skills-mesh__stage">
-    <svg class="skills-mesh__svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet">
-      <g class="skills-mesh__edges">
-        <line class="skill-edge" data-id="python-java" x1="150" y1="120" x2="320" y2="90"></line>
-        <line class="skill-edge" data-id="java-c" x1="320" y1="90" x2="480" y2="140"></line>
-        <line class="skill-edge" data-id="c-javascript" x1="480" y1="140" x2="650" y2="100"></line>
-        <line class="skill-edge" data-id="javascript-rust" x1="650" y1="100" x2="820" y2="130"></line>
-        <line class="skill-edge" data-id="rust-haskell" x1="820" y1="130" x2="980" y2="90"></line>
-        <line class="skill-edge" data-id="python-flask" x1="150" y1="120" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="flask-sqlite" x1="500" y1="300" x2="350" y2="340"></line>
-        <line class="skill-edge" data-id="flask-docker" x1="500" y1="300" x2="650" y2="340"></line>
-        <line class="skill-edge" data-id="rbac-flask" x1="250" y1="480" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="rbac-owasp" x1="250" y1="480" x2="420" y2="520"></line>
-        <line class="skill-edge" data-id="owasp-flask" x1="420" y1="520" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="owasp-aes" x1="420" y1="520" x2="600" y2="500"></line>
-        <line class="skill-edge" data-id="aes-threshold" x1="600" y1="500" x2="780" y2="480"></line>
-        <line class="skill-edge" data-id="agile-leadership" x1="200" y1="620" x2="420" y2="650"></line>
-        <line class="skill-edge" data-id="leadership-flask" x1="420" y1="650" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="leadership-writing" x1="420" y1="650" x2="650" y2="620"></line>
-        <line class="skill-edge" data-id="writing-spss" x1="650" y1="620" x2="850" y2="650"></line>
-        <line class="skill-edge" data-id="threshold-rust" x1="780" y1="480" x2="820" y2="130"></line>
-      </g>
-      <g class="skills-mesh__nodes">
-        <g class="skill-node" data-id="python" transform="translate(150,120)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Python</text></g>
-        <g class="skill-node" data-id="java" transform="translate(320,90)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Java</text></g>
-        <g class="skill-node" data-id="c" transform="translate(480,140)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">C</text></g>
-        <g class="skill-node" data-id="javascript" transform="translate(650,100)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">JavaScript</text></g>
-        <g class="skill-node" data-id="rust" transform="translate(820,130)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Rust</text></g>
-        <g class="skill-node" data-id="haskell" transform="translate(980,90)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Haskell</text></g>
-        <g class="skill-node" data-id="flask" transform="translate(500,300)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Flask</text></g>
-        <g class="skill-node" data-id="sqlite" transform="translate(350,340)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">SQLite</text></g>
-        <g class="skill-node" data-id="docker" transform="translate(650,340)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Docker</text></g>
-        <g class="skill-node" data-id="rbac" transform="translate(250,480)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">RBAC</text></g>
-        <g class="skill-node" data-id="owasp" transform="translate(420,520)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">OWASP</text></g>
-        <g class="skill-node" data-id="aes" transform="translate(600,500)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">AES</text></g>
-        <g class="skill-node" data-id="threshold" transform="translate(780,480)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Threshold cryptography</text></g>
-        <g class="skill-node" data-id="agile" transform="translate(200,620)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Agile/Scrum</text></g>
-        <g class="skill-node" data-id="leadership" transform="translate(420,650)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Team leadership</text></g>
-        <g class="skill-node" data-id="writing" transform="translate(650,620)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Technical writing</text></g>
-        <g class="skill-node" data-id="spss" transform="translate(850,650)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">SPSS</text></g>
-      </g>
-    </svg>
-  </div>
-
-  <div class="skills-mesh__fallback chip-row">
-    <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span>
-    <span class="chip">JavaScript</span><span class="chip">Rust</span><span class="chip">Haskell</span>
-    <span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Docker</span>
-    <span class="chip">RBAC</span><span class="chip">OWASP</span>
-    <span class="chip">Threshold cryptography</span><span class="chip">AES</span>
-    <span class="chip">Agile/Scrum</span><span class="chip">SPSS</span>
-    <span class="chip">Team leadership</span><span class="chip">Technical writing</span>
-  </div>
-</section>
-  <section id="technologies" class="tools-belt">
-  <div class="container">
-    <h2 data-reveal="up">Workflow</h2>
-    <div class="tools-grid">
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon">
-        <span class="tool-name">VS Code</span>
-        <span class="tool-caption">Daily driver — every project written here.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/git/ffffff" alt="Git" class="tool-icon">
-        <span class="tool-name">Git</span>
-        <span class="tool-caption">Version control across all five projects.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="tool-icon">
-        <span class="tool-name">GitHub</span>
-        <span class="tool-caption">Every repo, every commit, every history.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/githubactions/ffffff" alt="GitHub Actions" class="tool-icon">
-        <span class="tool-name">GitHub Actions</span>
-        <span class="tool-caption">CI/CD pipeline auto-deploying ScrumManager on every push.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker" class="tool-icon">
-        <span class="tool-name">Docker</span>
-        <span class="tool-caption">Containerized ScrumManager and Log Sentinel for consistent environments.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/render/ffffff" alt="Render" class="tool-icon">
-        <span class="tool-name">Render</span>
-        <span class="tool-caption">Hosts the Log Sentinel and ScrumManager backends.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/wireshark/ffffff" alt="Wireshark" class="tool-icon">
-        <span class="tool-name">Wireshark &amp; tshark</span>
-        <span class="tool-caption">Packet capture and analysis behind the mesh vulnerability research.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/figma/ffffff" alt="Figma" class="tool-icon">
-        <span class="tool-name">Figma</span>
-        <span class="tool-caption">Designed the Blueberry dashboard wireframes.</span>
-      </div>
-      <div class="tool-card tilt" data-reveal="up">
-        <img src="https://cdn.simpleicons.org/swagger/ffffff" alt="Swagger UI" class="tool-icon">
-        <span class="tool-name">Swagger UI</span>
-        <span class="tool-caption">Documented ScrumManager's 15+ REST endpoints.</span>
+  <section class="home-links">
+    <div class="container">
+      <p class="eyebrow" data-reveal="up">Explore</p>
+      <div class="home-links__grid">
+        <a class="home-card" href="about.html" data-reveal="up">
+          <span class="home-card__title">About</span>
+          <span class="home-card__text">How I ended up in security, what I work with, and the tools I use.</span>
+          <span class="home-card__go">Open &rarr;</span>
+        </a>
+        <a class="home-card" href="projects.html" data-reveal="up">
+          <span class="home-card__title">Projects</span>
+          <span class="home-card__text">Case files: mesh network research, Log Sentinel, ScrumManager, Blueberry, and my thesis.</span>
+          <span class="home-card__go">Open &rarr;</span>
+        </a>
+        <a class="home-card" href="experience.html" data-reveal="up">
+          <span class="home-card__title">Experience</span>
+          <span class="home-card__text">Roles, education, and achievements.</span>
+          <span class="home-card__go">Open &rarr;</span>
+        </a>
+        <a class="home-card" href="contact.html" data-reveal="up">
+          <span class="home-card__title">Contact</span>
+          <span class="home-card__text">Send me a message.</span>
+          <span class="home-card__go">Open &rarr;</span>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <section id="projects" class="projects-cases">
-  <div class="case-intro container" data-reveal="up">
-    <p class="eyebrow">Projects</p>
-    <h2>Case Files</h2>
-  </div>
-
-  <div class="case-file">
-  <div class="case-file__sticky">
-    <div class="case-file__grid container">
-      <div class="case-file__text">
-        <div class="case-file__terminal">
-          <span class="case-file__cursor">_</span>
-          <span class="case-file__type" data-full-text="ACCESSING FILE // THESIS_THRESHOLD_SIGNATURES.log"></span>
-        </div>
-        <div class="case-file__content">
-          <span class="case-file__tag">Undergraduate Thesis · Usable Security · In Progress</span>
-          <h3 class="case-file__title">Making the Secure Path the Trivial Path — Interaction Design for Threshold Signatures</h3>
-          <p class="case-file__desc">Threshold signature schemes like FROST, Arctic, and Threshold Raccoon are evaluated only on cryptographic grounds: can an attacker forge a signature? Nobody asks whether the humans acting as signers can operate them correctly. This research applies Ka-Ping Yee's ten principles of secure interaction design to the moments where a plausible interface would lead a signer to break the scheme's security assumptions, such as missing an aborted co-signer, trusting the wrong majority, or reusing session state, with no flaw in the cryptography. The goal is a set of concrete design guidelines, supervised by Dr. Navid Nasr Esfahani.</p>
-          <div class="case-file__stats">
-            <div class="case-stat"><span class="case-stat__num" data-target="3">0</span><span class="case-stat__label">schemes under study</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="10">0</span><span class="case-stat__label">design principles applied</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="4">0</span><span class="case-stat__label">interaction points analyzed</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-file__visual">
-        <div class="mini-ts">
-          <div class="mini-ts__nodes">
-            <div class="mini-ts__node mini-ts__node--a">S1</div>
-            <div class="mini-ts__node mini-ts__node--b">S2</div>
-            <div class="mini-ts__node mini-ts__node--c">S3</div>
-          </div>
-          <div class="mini-ts__track"><div class="mini-ts__fill"></div></div>
-          <div class="mini-ts__status">
-            <span class="mini-ts__ok">2 of 3 signed…</span>
-            <span class="mini-ts__warn">⚠ co-signer aborted — would you notice?</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- CASE FILE 1: Mesh Vulnerability (fully built, real stats) -->
-  <div class="case-file">
-  <div class="case-file__sticky">
-    <div class="case-file__grid container">
-      <div class="case-file__text">
-        <div class="case-file__terminal">
-          <span class="case-file__cursor">_</span>
-          <span class="case-file__type" data-full-text="ACCESSING FILE // MESH_VULNERABILITY_CASE_STUDY.log"></span>
-        </div>
-        <div class="case-file__content">
-          <span class="case-file__tag">Security Research · SPyCy Lab</span>
-          <h3 class="case-file__title">Passive Eavesdropping in a batman-adv Mesh Network</h3>
-          <p class="case-file__desc">Captured and analyzed live inter-node traffic on a 5-node wireless mesh network, proving any nearby device could silently read cryptographic key shares in plaintext; no authentication, no intrusion, no trace.</p>
-          <div class="case-file__stats">
-            <div class="case-stat"><span class="case-stat__num" data-target="5">0</span><span class="case-stat__label">mesh nodes analyzed</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="100">0</span><span class="case-stat__label">packets decoded</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="0">0</span><span class="case-stat__label">credentials required</span></div>
-          </div>
-          <div class="case-file__links">
-            <a href="assets/Mesh_Vulnerability_Case_Study_Atena.pdf" target="_blank" rel="noopener" class="case-link">Read the case study →</a>
-          </div>
-        </div>
-      </div>
-      <div class="case-file__visual">
-        <div class="packet-feed">
-          <div class="packet-feed__track">
-            <p>10.10.4.4 → 10.10.1.2 : PLAINTEXT</p>
-            <p>SHARE_FRAGMENT=0x9f3a...c21</p>
-            <p>10.10.1.3 → 10.10.4.4 : PLAINTEXT</p>
-            <p>ARP who-has 10.10.0.1</p>
-            <p>SHARE_FRAGMENT=0x1b7e...4d0</p>
-            <p>10.10.1.2 → 10.10.4.4 : PLAINTEXT</p>
-            <p>10.10.4.4 → 10.10.1.2 : PLAINTEXT</p>
-            <p>SHARE_FRAGMENT=0x9f3a...c21</p>
-            <p>10.10.1.3 → 10.10.4.4 : PLAINTEXT</p>
-            <p>ARP who-has 10.10.0.1</p>
-            <p>SHARE_FRAGMENT=0x1b7e...4d0</p>
-            <p>10.10.1.2 → 10.10.4.4 : PLAINTEXT</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- CASE FILE 2: Log Sentinel -->
-<div class="case-file">
-  <div class="case-file__sticky">
-    <div class="case-file__grid container">
-      <div class="case-file__text">
-        <div class="case-file__terminal">
-          <span class="case-file__cursor">_</span>
-          <span class="case-file__type" data-full-text="ACCESSING FILE // LOG_SENTINEL.log"></span>
-        </div>
-        <div class="case-file__content">
-          <span class="case-file__tag">Full-Stack Security Tooling · Live Deployment</span>
-          <h3 class="case-file__title">Log Sentinel — Automated Log Analysis Dashboard</h3>
-          <p class="case-file__desc">Parses Apache/Nginx access logs and automatically flags brute-force attempts, directory scans, server-error spikes, and off-hours activity — then explains, in plain English, why each event is suspicious and what to do about it, rather than just dumping raw alerts.</p>
-          <div class="case-file__stats">
-            <div class="case-stat"><span class="case-stat__num" data-target="4">0</span><span class="case-stat__label">anomaly types detected</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="6">0</span><span class="case-stat__label">REST API endpoints</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="38">0</span><span class="case-stat__label">days, solo build</span></div>
-          </div>
-          <div class="case-file__links">
-            <a href="https://atenahfr.github.io/log-sentinel/frontend/index.html" target="_blank" rel="noopener" class="case-link">Live demo →</a>
-            <a href="https://github.com/atenahfr/log-sentinel" target="_blank" rel="noopener" class="case-link">GitHub →</a>
-            <a href="https://dev.to/atenahfr/how-i-built-a-log-analysis-tool-to-detect-network-anomalies-45ed" target="_blank" rel="noopener" class="case-link">Blog post →</a>
-          </div>
-        </div>
-      </div>
-      <div class="case-file__visual">
-        <div class="mini-chart">
-          <div class="mini-chart__bar" style="--h:40%"></div>
-          <div class="mini-chart__bar" style="--h:65%"></div>
-          <div class="mini-chart__bar mini-chart__bar--flagged" style="--h:92%"></div>
-          <div class="mini-chart__bar" style="--h:30%"></div>
-          <div class="mini-chart__bar" style="--h:55%"></div>
-          <div class="mini-chart__bar" style="--h:20%"></div>
-        </div>
-        <p class="mini-chart__label">requests per IP</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- CASE FILE 3: ScrumManager -->
-<div class="case-file">
-  <div class="case-file__sticky">
-    <div class="case-file__grid container">
-      <div class="case-file__text">
-        <div class="case-file__terminal">
-          <span class="case-file__cursor">_</span>
-          <span class="case-file__type" data-full-text="ACCESSING FILE // SCRUMMANAGER.log"></span>
-        </div>
-        <div class="case-file__content">
-          <span class="case-file__tag">Full-Stack Product · Team Project · In Progress</span>
-          <h3 class="case-file__title">ScrumManager — Agile Project Management Platform</h3>
-          <p class="case-file__desc">A production-grade Scrum tool for backlog management, sprint planning, and team collaboration — JWT-secured REST API, PostgreSQL database, React/TypeScript frontend, and a full CI/CD pipeline that auto-deploys on every push. Built as a working deployed product, not a course exercise.</p>
-          <div class="case-file__stats">
-            <div class="case-stat"><span class="case-stat__num" data-target="92">0</span><span class="case-stat__label">commits shipped</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="15">0</span><span class="case-stat__label">REST API endpoints</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="73">0</span><span class="case-stat__label">% test coverage</span></div>
-          </div>
-          <div class="case-file__links">
-            <a href="https://scrummanager.onrender.com" target="_blank" rel="noopener" class="case-link">Live app →</a>
-            <a href="https://github.com/ScrumManagerTeam/ScrumManager" target="_blank" rel="noopener" class="case-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
-      <div class="case-file__visual">
-        <div class="mini-kanban">
-          <div class="mini-kanban__col"><p class="mini-kanban__title">To Do</p></div>
-          <div class="mini-kanban__col"><p class="mini-kanban__title">In Progress</p></div>
-          <div class="mini-kanban__col"><p class="mini-kanban__title">Done</p></div>
-          <div class="mini-kanban__card"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!-- CASE FILE 5: Privacy & Security Analysis -->
-<div class="case-file">
-  <div class="case-file__sticky">
-    <div class="case-file__grid container">
-      <div class="case-file__text">
-        <div class="case-file__terminal">
-          <span class="case-file__cursor">_</span>
-          <span class="case-file__type" data-full-text="ACCESSING FILE // PRICING_SYSTEM_ANALYSIS.log"></span>
-        </div>
-        <div class="case-file__content">
-          <span class="case-file__tag">Systems Design & Policy Analysis · Team Project</span>
-          <h3 class="case-file__title">Privacy & Security Analysis — Enterprise Pricing System Design</h3>
-          <p class="case-file__desc">Designed and analyzed a role-based pricing management system for a grocery chain, built on Google OAuth authentication, encrypted cloud storage, and an approval workflow that keeps arbitrary price changes in check. Led the security and privacy analysis — threat surfaces, OWASP-aligned testing plans, data minimization, and the ethical and societal tradeoffs of automating a process that used to rely on human judgment.</p>
-          <div class="case-file__stats">
-            <div class="case-stat"><span class="case-stat__num" data-target="6">0</span><span class="case-stat__label">analysis dimensions covered</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="5">0</span><span class="case-stat__label">team members</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="9">0</span><span class="case-stat__label">week implementation plan</span></div>
-          </div>
-          <div class="case-file__links">
-            <a href="assets/pricing-system-analysis.pdf" target="_blank" rel="noopener" class="case-link">Read the case study →</a>
-          </div>
-        </div>
-      </div>
-      <div class="case-file__visual">
-        <div class="mini-gauge">
-          <div class="mini-gauge__arc"></div>
-          <div class="mini-gauge__needle"></div>
-          <p class="mini-gauge__labels"><span>Exposed</span><span>Protected</span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="case-file">
-  <div class="case-file__sticky">
-    <div class="case-file__grid container">
-      <div class="case-file__text">
-        <div class="case-file__terminal">
-          <span class="case-file__cursor">_</span>
-          <span class="case-file__type" data-full-text="ACCESSING FILE // CLOTHING_RETAIL_DBMS.log"></span>
-        </div>
-        <div class="case-file__content">
-          <span class="case-file__tag">Database Systems · Team Project</span>
-          <h3 class="case-file__title">Clothing Retail Store DBMS — Oracle Database Design &amp; Application</h3>
-          <p class="case-file__desc">A relational database for a three-floor clothing store, designed end to end in Oracle by a team of three: ER and EER models, a ten-table schema that enforces the business rules in the database itself, normalization to 3NF/BCNF, views and advanced SQL, and a Unix shell menu application that runs the queries. Its core idea is the product-versus-variant split: stock is counted, sold, and returned per size, never per design.</p>
-          <div class="case-file__stats">
-            <div class="case-stat"><span class="case-stat__num" data-target="10">0</span><span class="case-stat__label">normalized tables</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="12">0</span><span class="case-stat__label">modelled relationships</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="0">0</span><span class="case-stat__label">negative stock levels possible</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-file__visual">
-        <div class="mini-er">
-          <svg viewBox="0 0 300 180" role="img" aria-label="Animated ER diagram: Sale, SaleItem, Variant, StockLevel">
-            <line class="er-line" x1="104" y1="38" x2="196" y2="38"></line>
-            <line class="er-line" x1="238" y1="56" x2="238" y2="124"></line>
-            <line class="er-line" x1="196" y1="142" x2="104" y2="142"></line>
-
-            <rect class="er-box" x="20" y="20" width="84" height="36" rx="4"></rect>
-            <text class="er-label" x="62" y="42">Sale</text>
-
-            <rect class="er-box" x="196" y="20" width="84" height="36" rx="4"></rect>
-            <rect class="er-weak" x="199" y="23" width="78" height="30" rx="3"></rect>
-            <text class="er-label" x="238" y="42">SaleItem</text>
-
-            <rect class="er-box" x="196" y="124" width="84" height="36" rx="4"></rect>
-            <text class="er-label" x="238" y="146">Variant</text>
-
-            <rect class="er-box" x="20" y="124" width="84" height="36" rx="4"></rect>
-            <rect class="er-weak" x="23" y="127" width="78" height="30" rx="3"></rect>
-            <text class="er-label" x="62" y="146">StockLevel</text>
-
-            <text class="er-card" x="110" y="32">1</text>
-            <text class="er-card" x="184" y="32">N</text>
-            <text class="er-card" x="246" y="72">N</text>
-            <text class="er-card" x="246" y="118">1</text>
-            <text class="er-card" x="184" y="136">1</text>
-            <text class="er-card" x="110" y="136">N</text>
-
-            <circle class="er-pulse" r="8">
-              <animateMotion dur="5s" begin="0.12s" repeatCount="indefinite" path="M104,38 L196,38 M238,56 L238,124 M196,142 L104,142"></animateMotion>
-            </circle>
-            <circle class="er-dot" r="4">
-              <animateMotion dur="5s" repeatCount="indefinite" path="M104,38 L196,38 M238,56 L238,124 M196,142 L104,142"></animateMotion>
-            </circle>
-          </svg>
-          <p class="mini-er__caption">every sale updates stock</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!-- CASE FILE 4: Blueberry -->
-<div class="case-file">
-  <div class="case-file__sticky">
-    <div class="case-file__grid container">
-      <div class="case-file__text">
-        <div class="case-file__terminal">
-          <span class="case-file__cursor">_</span>
-          <span class="case-file__type" data-full-text="ACCESSING FILE // BLUEBERRY.log"></span>
-        </div>
-        <div class="case-file__content">
-          <span class="case-file__tag">Academic Research · SPyCy Lab, TMU · In Progress</span>
-          <h3 class="case-file__title">Blueberry — Distributed Encrypted File Storage</h3>
-          <p class="case-file__desc">A SPyCy Lab research project at Toronto Metropolitan University, built under Professor Navid Nasr Esfehani: a distributed file storage system in Rust that splits files into encrypted shares and spreads them across Amazon S3, Google Drive, and Dropbox, so no single provider — or single point of compromise — ever holds a complete copy. I designed the dashboard UI in Figma, defined the acceptance criteria driving the frontend build, and am now building that frontend layer in Dioxus.</p>
-          <div class="case-file__stats">
-            <div class="case-stat"><span class="case-stat__num" data-target="4">0</span><span class="case-stat__label">Rust workspace crates</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="3">0</span><span class="case-stat__label">cloud providers split across</span></div>
-            <div class="case-stat"><span class="case-stat__num" data-target="0">0</span><span class="case-stat__label">providers hold a full copy</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-file__visual">
-        <div class="mini-split">
-          <div class="mini-split__shard mini-split__shard--1"></div>
-          <div class="mini-split__shard mini-split__shard--2"></div>
-          <div class="mini-split__shard mini-split__shard--3"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-  <section id="experience" class="exp-log">
-  <div class="container">
-    <h2 data-reveal="up">Experience</h2>
-    <div class="exp-log__list">
-
-            <div class="exp-row exp-row--live" data-reveal="up">
-        <div class="exp-row__meta">
-          <span class="exp-pid">PROC_004</span>
-          <span class="exp-status"><span class="exp-status__dot"></span>RUNNING</span>
-        </div>
-        <div class="exp-row__body">
-          <h3 class="exp-role">Sales Advisor — H&amp;M, CF Toronto Eaton Centre</h3>
-          <p class="exp-dates">May 2026 – Present</p>
-          <p class="exp-desc">Run the full store floor in one of downtown Toronto's busiest retail locations: processing high-volume transactions and returns accurately, keeping stock records in sync with what's physically on the shelves, and resolving customer problems in real time under constant demand, all as part of a fast-moving team.</p>
-        </div>
-        <div class="exp-row__runtime">
-          <span class="exp-runtime__static">Ongoing</span>
-        </div>
-      </div>
-
-      <div class="exp-row" data-reveal="up">
-        <div class="exp-row__meta">
-          <span class="exp-pid">PROC_001</span>
-          <span class="exp-status"><span class="exp-status__dot"></span>TERMINATED (0)</span>
-        </div>
-        <div class="exp-row__body">
-          <h3 class="exp-role">Content Creator — Mediplant</h3>
-          <p class="exp-dates">Jan 2024 – Jan 2025</p>
-          <p class="exp-desc">Translated organizational goals into targeted written content; produced analytical reports on audience engagement.</p>
-        </div>
-        <div class="exp-row__runtime">
-          <span class="exp-runtime__num" data-target="12">0</span>
-          <span class="exp-runtime__label">months runtime</span>
-        </div>
-      </div>
-
-      <div class="exp-row" data-reveal="up">
-        <div class="exp-row__meta">
-          <span class="exp-pid">PROC_002</span>
-          <span class="exp-status"><span class="exp-status__dot"></span>TERMINATED (0)</span>
-        </div>
-        <div class="exp-row__body">
-          <h3 class="exp-role">Managing Director — Saha Sazeh Farhikhtegan Pars Co. Ltd.</h3>
-          <p class="exp-dates">Apr 2023 – Jan 2024</p>
-          <p class="exp-desc">Legal signatory authority over contracts; managed daily operations across multiple departments.</p>
-        </div>
-        <div class="exp-row__runtime">
-          <span class="exp-runtime__num" data-target="9">0</span>
-          <span class="exp-runtime__label">months runtime</span>
-        </div>
-      </div>
-
-      <div class="exp-row" data-reveal="up">
-        <div class="exp-row__meta">
-          <span class="exp-pid">JOB_003</span>
-          <span class="exp-status"><span class="exp-status__dot"></span>EXIT 0</span>
-        </div>
-        <div class="exp-row__body">
-          <h3 class="exp-role">Volunteer — Hack the North, University of Waterloo</h3>
-          <p class="exp-dates">Aug 2024</p>
-          <p class="exp-desc">Coordinated event logistics for 1,000+ participants at Canada's largest hackathon.</p>
-        </div>
-        <div class="exp-row__runtime">
-          <span class="exp-runtime__static">Single-event job</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <section id="education" class="edu-log">
-  <div class="container">
-    <h2 data-reveal="up">Education</h2>
-    <div class="edu-terminal" data-reveal="up">
-      <p class="edu-terminal__cmd">$ pip install -r degree_requirements.txt</p>
-      <p class="edu-line" style="--i:0">Collecting data-structures<span class="edu-dots">......</span><span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:1">Collecting computer-organization-i<span class="edu-dots">...</span><span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:2">Collecting computer-organization-ii<span class="edu-dots">..</span><span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:3">Collecting computer-science-i-python<span class="edu-dots">.</span><span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:4">Collecting computer-science-ii-java<span class="edu-dots">.</span><span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:5">Collecting intro-to-c-and-unix<span class="edu-dots">....</span><span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:6">Collecting comparative-programming-languages<span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:7">Collecting probability-and-statistics-i<span class="edu-dots">..</span><span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:8">Collecting social-issues-ethics-professionalism<span class="edu-ok">done</span></p>
-      <p class="edu-line" style="--i:9">Collecting communication-in-the-computer-industry<span class="edu-ok">done</span></p>
-      <p class="edu-terminal__summary">Successfully installed 10 packages</p>
-      <p class="edu-terminal__degree">BSc Computer Science — Toronto Metropolitan University<span class="edu-terminal__status">Expected 2027</span></p>
-    </div>
-  </div>
-</section>
-
-  <section id="achievements" class="ach-badges">
-  <div class="container">
-    <h2 data-reveal="up">Achievements</h2>
-    <div class="ach-grid">
-      <div class="ach-badge">
-        <svg class="ach-badge__icon" viewBox="0 0 40 40" width="32" height="32"><polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 20 L18 25 L28 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="ach-badge__title">IEEE CSTMC Software Fundamentals Workshop</span>
-        <span class="ach-badge__meta">2024/2025</span>
-      </div>
-      <div class="ach-badge">
-        <svg class="ach-badge__icon" viewBox="0 0 40 40" width="32" height="32"><polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 20 L18 25 L28 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="ach-badge__title">Programming with Python</span>
-        <span class="ach-badge__meta">CivilHouse, 2022</span>
-      </div>
-      <div class="ach-badge">
-        <svg class="ach-badge__icon" viewBox="0 0 40 40" width="32" height="32"><polygon points="20,3 35,11.5 35,28.5 20,37 5,28.5 5,11.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 20 L18 25 L28 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span class="ach-badge__title">IELTS</span>
-        <span class="ach-badge__meta">7.5</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- <section id="testimonials"><div class="container"><h2 data-reveal="up">Testimonials</h2></div></section> -->
-  <section id="contact" class="contact-channel">
-  <div class="container">
-    <h2 data-reveal="up">Contact</h2>
-
-    <p class="channel-status" data-reveal="up">
-      <span class="channel-status__dot"></span>
-      <span class="channel-status__text">AWAITING TRANSMISSION...</span>
-    </p>
-
-    <form class="glass contact-form" data-reveal="up" action="https://formspree.io/f/mykrbbzg" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <textarea name="message" placeholder="Message" rows="4" required></textarea>
-      <div class="magnetic-wrap">
-        <button type="submit" class="btn-primary magnetic">Send &rarr;</button>
-      </div>
-    </form>
-
-    <p style="margin-top:20px; color:var(--text-secondary); font-size:14px;">atenah.cs@gmail.com</p>
-  </div>
-</section>
 
   <footer id="site-footer">
     <div class="container">
@@ -598,27 +78,19 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script type="module">
-  import Lenis from 'https://esm.sh/lenis@1.1.13';
-  window.Lenis = Lenis;
-</script>
+    import Lenis from 'https://esm.sh/lenis@1.1.13';
+    window.Lenis = Lenis;
+  </script>
   <script src="js/main.js" defer></script>
   <script src="js/animations.js" defer></script>
-  <script src="js/case-files.js" defer></script>
-  <script src="js/about-decrypt.js" defer></script>
-  <script src="js/skills-mesh.js" defer></script>
-  <script src="js/experience-log.js" defer></script>
-  <script src="js/education-log.js" defer></script>
-  <script src="js/achievements-badges.js" defer></script>
-  <script src="js/contact-channel.js" defer></script>
   <script src="js/scene-hero.js" defer></script>
-  <script src="js/tools-touch.js" defer></script>
 </body>
 </html>
