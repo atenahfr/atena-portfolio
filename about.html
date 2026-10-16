@@ -29,9 +29,10 @@
   <div class="container">
     <p class="eyebrow" data-reveal="up">About</p>
     <div class="about-decrypt__body">
-      <p class="decrypt-p">I'm a Computer Science student at Toronto Metropolitan University who ended up in security almost by accident. I was capturing routine network traffic during a research project and noticed something that shouldn't have been readable. It was. That one thirty-minute discovery, a live cryptography experiment leaking secrets in plaintext over a mesh network, is basically how I think about most systems now: the math can be perfect and the whole thing can still fail somewhere nobody was looking.</p>
-      <p class="decrypt-p">Most of what I build lives in that gap. I've led a team of five through two agile sprints to ship a full Scrum management tool, written a log analysis dashboard that flags brute-force patterns and anomalies in server logs, and dug into the distance between what people say they want protected and what they actually let slip, especially around location data. Right now I'm part of a team building a Rust tool that splits files across cloud providers so no single one ever holds enough to reconstruct them, its own small bet that trust should be distributed, not assumed.</p>
-      <p class="decrypt-p">I'm looking for the next place to point that curiosity, ideally somewhere doing real security or privacy research.</p>
+      <p class="decrypt-p">I'm a Computer Science student at Toronto Metropolitan University, finishing my degree in 2027, and what I enjoy most is working out how a system really works underneath and then building one that holds up. That has taken me through a lot of different corners of computing: designing databases, shipping full-stack products, working in a research lab, and chasing down the problems nobody planned for.</p>
+      <p class="decrypt-p">On the engineering side, I led a team of five through two agile sprints to ship ScrumManager, a deployed project management platform, and built Log Sentinel, a log analysis dashboard that I later extended with a machine-learning model. I designed a ten-table Oracle database for a clothing retail store, from the ER diagrams down to the SQL. In the SPyCy Lab at TMU, I'm part of the team building Blueberry, a Rust file storage system that splits data across cloud providers; I designed its dashboard in Figma and am now building the frontend.</p>
+      <p class="decrypt-p">Underneath most of it is one question: what happens when real people use these systems? A thirty-minute look at network traffic once showed me a live cryptography experiment leaking its secrets in plain sight, and my thesis asks a related question about how threshold signature schemes can be designed so the secure way to use them is also the easiest. Outside of class, I work as a sales advisor at H&amp;M, which keeps me practiced at accuracy and calm under pressure.</p>
+      <p class="decrypt-p">I'm looking for the next place to build and learn: databases, backend and systems work, or security and privacy research.</p>
     </div>
   </div>
 </section>
@@ -42,58 +43,20 @@
   </div>
 
   <div class="skills-mesh__stage">
-    <svg class="skills-mesh__svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet">
-      <g class="skills-mesh__edges">
-        <line class="skill-edge" data-id="python-java" x1="150" y1="120" x2="320" y2="90"></line>
-        <line class="skill-edge" data-id="java-c" x1="320" y1="90" x2="480" y2="140"></line>
-        <line class="skill-edge" data-id="c-javascript" x1="480" y1="140" x2="650" y2="100"></line>
-        <line class="skill-edge" data-id="javascript-rust" x1="650" y1="100" x2="820" y2="130"></line>
-        <line class="skill-edge" data-id="rust-haskell" x1="820" y1="130" x2="980" y2="90"></line>
-        <line class="skill-edge" data-id="python-flask" x1="150" y1="120" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="flask-sqlite" x1="500" y1="300" x2="350" y2="340"></line>
-        <line class="skill-edge" data-id="flask-docker" x1="500" y1="300" x2="650" y2="340"></line>
-        <line class="skill-edge" data-id="rbac-flask" x1="250" y1="480" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="rbac-owasp" x1="250" y1="480" x2="420" y2="520"></line>
-        <line class="skill-edge" data-id="owasp-flask" x1="420" y1="520" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="owasp-aes" x1="420" y1="520" x2="600" y2="500"></line>
-        <line class="skill-edge" data-id="aes-threshold" x1="600" y1="500" x2="780" y2="480"></line>
-        <line class="skill-edge" data-id="agile-leadership" x1="200" y1="620" x2="420" y2="650"></line>
-        <line class="skill-edge" data-id="leadership-flask" x1="420" y1="650" x2="500" y2="300"></line>
-        <line class="skill-edge" data-id="leadership-writing" x1="420" y1="650" x2="650" y2="620"></line>
-        <line class="skill-edge" data-id="writing-spss" x1="650" y1="620" x2="850" y2="650"></line>
-        <line class="skill-edge" data-id="threshold-rust" x1="780" y1="480" x2="820" y2="130"></line>
-      </g>
-      <g class="skills-mesh__nodes">
-        <g class="skill-node" data-id="python" transform="translate(150,120)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Python</text></g>
-        <g class="skill-node" data-id="java" transform="translate(320,90)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Java</text></g>
-        <g class="skill-node" data-id="c" transform="translate(480,140)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">C</text></g>
-        <g class="skill-node" data-id="javascript" transform="translate(650,100)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">JavaScript</text></g>
-        <g class="skill-node" data-id="rust" transform="translate(820,130)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Rust</text></g>
-        <g class="skill-node" data-id="haskell" transform="translate(980,90)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Haskell</text></g>
-        <g class="skill-node" data-id="flask" transform="translate(500,300)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Flask</text></g>
-        <g class="skill-node" data-id="sqlite" transform="translate(350,340)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">SQLite</text></g>
-        <g class="skill-node" data-id="docker" transform="translate(650,340)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Docker</text></g>
-        <g class="skill-node" data-id="rbac" transform="translate(250,480)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">RBAC</text></g>
-        <g class="skill-node" data-id="owasp" transform="translate(420,520)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">OWASP</text></g>
-        <g class="skill-node" data-id="aes" transform="translate(600,500)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">AES</text></g>
-        <g class="skill-node" data-id="threshold" transform="translate(780,480)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Threshold cryptography</text></g>
-        <g class="skill-node" data-id="agile" transform="translate(200,620)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Agile/Scrum</text></g>
-        <g class="skill-node" data-id="leadership" transform="translate(420,650)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Team leadership</text></g>
-        <g class="skill-node" data-id="writing" transform="translate(650,620)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">Technical writing</text></g>
-        <g class="skill-node" data-id="spss" transform="translate(850,650)"><circle class="skill-node__hit" r="22"></circle><circle class="skill-node__dot" r="8"></circle><text x="16" y="5">SPSS</text></g>
-      </g>
-    </svg>
+    <svg class="skills-mesh__svg" id="skills-svg" viewBox="0 0 1240 760" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Graph of my skills and how they connect"></svg>
   </div>
 
-  <div class="skills-mesh__fallback chip-row">
-    <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span>
-    <span class="chip">JavaScript</span><span class="chip">Rust</span><span class="chip">Haskell</span>
-    <span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Docker</span>
-    <span class="chip">RBAC</span><span class="chip">OWASP</span>
-    <span class="chip">Threshold cryptography</span><span class="chip">AES</span>
-    <span class="chip">Agile/Scrum</span><span class="chip">SPSS</span>
-    <span class="chip">Team leadership</span><span class="chip">Technical writing</span>
-  </div>
+  <noscript>
+    <div class="container chip-row">
+      <span class="chip">Python</span><span class="chip">Java</span><span class="chip">C</span>
+      <span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Rust</span><span class="chip">Haskell</span>
+      <span class="chip">Oracle SQL</span><span class="chip">PostgreSQL</span><span class="chip">SQLite</span>
+      <span class="chip">Flask</span><span class="chip">React</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span>
+      <span class="chip">Linux/Unix</span><span class="chip">Wireshark &amp; Scapy</span><span class="chip">OWASP</span><span class="chip">RBAC</span>
+      <span class="chip">Threshold cryptography</span><span class="chip">Usable security</span><span class="chip">scikit-learn</span><span class="chip">Figma</span>
+      <span class="chip">Agile/Scrum</span><span class="chip">Team leadership</span><span class="chip">Technical writing</span>
+    </div>
+  </noscript>
 </section>
 
   <section id="technologies" class="tools-belt">
@@ -103,12 +66,12 @@
       <div class="tool-card tilt" data-reveal="up">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tool-icon">
         <span class="tool-name">VS Code</span>
-        <span class="tool-caption">Daily driver — every project written here.</span>
+        <span class="tool-caption">Daily driver: every project written here.</span>
       </div>
       <div class="tool-card tilt" data-reveal="up">
         <img src="https://cdn.simpleicons.org/git/ffffff" alt="Git" class="tool-icon">
         <span class="tool-name">Git</span>
-        <span class="tool-caption">Version control across all five projects.</span>
+        <span class="tool-caption">Version control across every project.</span>
       </div>
       <div class="tool-card tilt" data-reveal="up">
         <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" class="tool-icon">
@@ -129,6 +92,36 @@
         <img src="https://cdn.simpleicons.org/render/ffffff" alt="Render" class="tool-icon">
         <span class="tool-name">Render</span>
         <span class="tool-caption">Hosts the Log Sentinel and ScrumManager backends.</span>
+      </div>
+      <div class="tool-card tilt" data-reveal="up">
+        <img src="https://cdn.simpleicons.org/oracle/ffffff" alt="Oracle" class="tool-icon" loading="lazy" onerror="this.style.visibility='hidden'">
+        <span class="tool-name">Oracle SQL Developer</span>
+        <span class="tool-caption">Where the retail store database was designed, scripted, and tested.</span>
+      </div>
+      <div class="tool-card tilt" data-reveal="up">
+        <img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL" class="tool-icon" loading="lazy" onerror="this.style.visibility='hidden'">
+        <span class="tool-name">PostgreSQL</span>
+        <span class="tool-caption">The database behind ScrumManager.</span>
+      </div>
+      <div class="tool-card tilt" data-reveal="up">
+        <img src="https://cdn.simpleicons.org/rust/ffffff" alt="Rust" class="tool-icon" loading="lazy" onerror="this.style.visibility='hidden'">
+        <span class="tool-name">Rust &amp; Cargo</span>
+        <span class="tool-caption">Blueberry's four-crate workspace, built in Rust.</span>
+      </div>
+      <div class="tool-card tilt" data-reveal="up">
+        <img src="https://cdn.simpleicons.org/tauri/ffffff" alt="Tauri" class="tool-icon" loading="lazy" onerror="this.style.visibility='hidden'">
+        <span class="tool-name">Tauri &amp; Dioxus</span>
+        <span class="tool-caption">The stack for the Blueberry frontend I'm building.</span>
+      </div>
+      <div class="tool-card tilt" data-reveal="up">
+        <img src="https://cdn.simpleicons.org/linux/ffffff" alt="Linux" class="tool-icon" loading="lazy" onerror="this.style.visibility='hidden'">
+        <span class="tool-name">Linux &amp; Bash</span>
+        <span class="tool-caption">Unix shell work, including the retail database menu application.</span>
+      </div>
+      <div class="tool-card tilt" data-reveal="up">
+        <img src="https://cdn.simpleicons.org/scikitlearn/ffffff" alt="scikit-learn" class="tool-icon" loading="lazy" onerror="this.style.visibility='hidden'">
+        <span class="tool-name">scikit-learn</span>
+        <span class="tool-caption">Isolation Forest model extending Log Sentinel.</span>
       </div>
       <div class="tool-card tilt" data-reveal="up">
         <img src="https://cdn.simpleicons.org/wireshark/ffffff" alt="Wireshark" class="tool-icon">
